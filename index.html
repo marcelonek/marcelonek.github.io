@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都广之旅-花都区旅游线路与本地旅行社服务指南</title>
+    <meta name="description" content="花都广之旅是专注花都本地及周边旅游服务的专业平台，提供花都出发的跟团游、自由行、定制游线路推荐，涵盖融创文旅城、芙蓉嶂、塱头古村等热门目的地，为您提供出行攻略与预订指南。">
+    <meta name="keywords" content="花都广之旅,花都旅游,花都旅行社,广之旅花都,花都出发旅游,广州花都周边游,花都融创文旅城">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #22303f;
+            line-height: 1.65;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .site-header {
+            background: linear-gradient(135deg, #0f4c81 0%, #1a6fae 100%);
+            color: #ffffff;
+            padding: 16px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            font-size: 36px;
+            line-height: 1;
+        }
+
+        .brand-text h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+            color: #ffffff;
+        }
+
+        .brand-text p {
+            font-size: 13px;
+            opacity: 0.85;
+            letter-spacing: 0.5px;
+        }
+
+        .header-contact {
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 18px;
+            border-radius: 40px;
+            backdrop-filter: blur(4px);
+        }
+
+        .header-contact span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Nav */
+        .main-nav {
+            background-color: #0a3d63;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .main-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #eaf2f8;
+        }
+
+        .nav-links a {
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+            border-bottom-color: #ffc857;
+        }
+
+        .nav-search {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.15);
+            border-radius: 30px;
+            padding: 5px 10px;
+        }
+
+        .nav-search input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            padding: 5px 8px;
+            width: 180px;
+            font-size: 14px;
+        }
+
+        .nav-search input::placeholder {
+            color: #cbdbe9;
+        }
+
+        .nav-search button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(120deg, #e8f0f7 0%, #d4e5f0 100%);
+            padding: 50px 0 40px;
+            border-bottom: 1px solid #d0dfe9;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1 1 380px;
+        }
+
+        .hero-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0f4c81;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h2 span {
+            color: #e07c2f;
+        }
+
+        .hero-text p {
+            font-size: 17px;
+            color: #2b4a66;
+            margin-bottom: 25px;
+            max-width: 560px;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .hero-badge-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            padding: 8px 18px;
+            border-radius: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            font-size: 14px;
+            font-weight: 600;
+            color: #0f4c81;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #e07c2f;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(224, 124, 47, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #c9681f;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #0f4c81;
+            border: 2px solid #0f4c81;
+            padding: 10px 26px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover {
+            background: #0f4c81;
+            color: white;
+        }
+
+        .hero-image-card {
+            flex: 1 1 260px;
+            background: white;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border-left: 6px solid #1a6fae;
+            max-width: 320px;
+            margin-left: auto;
+        }
+
+        .hero-image-card h3 {
+            font-size: 18px;
+            color: #0f4c81;
+            margin-bottom: 12px;
+        }
+
+        .hero-list-item {
+            padding: 10px 0;
+            border-bottom: 1px dashed #d8e2ea;
+            display: flex;
+            gap: 8px;
+            align-items: baseline;
+        }
+
+        .hero-list-item:last-child {
+            border-bottom: none;
+        }
+
+        .hero-list-item .tag {
+            background: #eaf2f8;
+            color: #1a6fae;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .hero-list-item .desc {
+            color: #2b4a66;
+            font-size: 14px;
+        }
+
+        /* Feature Section */
+        .feature-section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 30px;
+            color: #0f4c81;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title p {
+            color: #5a7186;
+            font-size: 16px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 28px 20px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            color: #0f4c81;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #4a6478;
+        }
+
+        /* Route Section */
+        .route-section {
+            background: #ffffff;
+            padding: 50px 0;
+        }
+
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .route-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            border: 1px solid #e3eaf0;
+            transition: box-shadow 0.2s;
+        }
+
+        .route-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .route-thumb {
+            background: linear-gradient(145deg, #1a6fae 0%, #0f4c81 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: flex-end;
+            min-height: 130px;
+            position: relative;
+        }
+
+        .route-thumb .thumb-icon {
+            font-size: 40px;
+            margin-right: 12px;
+        }
+
+        .route-thumb h3 {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .route-thumb .sub-label {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .route-info {
+            padding: 20px;
+        }
+
+        .route-info p {
+            color: #3d5568;
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .route-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #edf2f6;
+            padding-top: 14px;
+            font-size: 13px;
+            color: #71889c;
+        }
+
+        .route-price {
+            color: #e07c2f;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        /* Service Steps */
+        .service-steps {
+            padding: 55px 0;
+            background: #eef4f8;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .step-item {
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+            background: white;
+            padding: 30px 16px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-bottom: 4px solid #1a6fae;
+        }
+
+        .step-num {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1a6fae;
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .step-item h3 {
+            margin: 12px 0 8px;
+            font-size: 18px;
+            color: #0f4c81;
+        }
+
+        .step-item p {
+            font-size: 14px;
+            color: #4a6478;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 55px 0;
+            background: #ffffff;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #f7fafc;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            padding: 18px 24px;
+            border-left: 4px solid #1a6fae;
+        }
+
+        .faq-item h3 {
+            font-size: 17px;
+            color: #0f4c81;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            font-size: 15px;
+            color: #3d5568;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #0f4c81 0%, #1a6fae 100%);
+            padding: 45px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .cta-btn {
+            background: #ffc857;
+            color: #0f4c81;
+            padding: 14px 36px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 17px;
+            display: inline-block;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .cta-btn:hover {
+            background: #ffb833;
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #0a2e47;
+            color: #aec9dd;
+            padding: 35px 0 20px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand p {
+            max-width: 320px;
+            line-height: 1.7;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .footer-bottom a {
+            color: #ffc857;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .route-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            .header-contact {
+                display: none;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 12px;
+                justify-content: center;
+                font-size: 14px;
+            }
+            .nav-search {
+                display: none;
+            }
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-badges, .hero-cta {
+                justify-content: center;
+            }
+            .hero-image-card {
+                margin-left: 0;
+                max-width: 100%;
+            }
+            .feature-grid, .route-grid {
+                grid-template-columns: 1fr;
+            }
+            .steps-container {
+                flex-direction: column;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .section-title h2 {
+                font-size: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-text h1 {
+                font-size: 22px;
+            }
+            .hero-text h2 {
+                font-size: 28px;
+            }
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="brand-icon">🌴</div>
+                <div class="brand-text">
+                    <h1>花都广之旅</h1>
+                    <p>花都出发 · 品质旅行服务</p>
+                </div>
+            </div>
+            <div class="header-contact">
+                <span>📞 咨询热线：020-8680 1234</span>
+                <span>🕐 09:00 - 18:00</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-links">
+                <a href="#">首页</a>
+                <a href="#">花都周边游</a>
+                <a href="#">国内线路</a>
+                <a href="#">定制旅行</a>
+                <a href="#">签证服务</a>
+                <a href="#">关于我们</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="搜索目的地或线路">
+                <button type="button">🔍</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h2>探索<span>花都之美</span><br>从花都广之旅出发</h2>
+                <p>深耕花都本地市场，为您提供专业、贴心、多元的旅游服务。无论是融创文旅城的欢乐亲子时光，还是芙蓉嶂的自然徒步，我们都有成熟线路与专属规划。</p>
+                <div class="hero-badges">
+                    <span class="hero-badge-item">✅ 本地老牌旅行社</span>
+                    <span class="hero-badge-item">📋 正规旅游合同</span>
+                    <span class="hero-badge-item">💰 特惠天天有</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#" class="btn-primary">查看本月热推线路</a>
+                    <a href="#" class="btn-outline">定制专属行程</a>
+                </div>
+            </div>
+            <div class="hero-image-card">
+                <h3>📍 花都热门目的地</h3>
+                <div class="hero-list-item">
+                    <span class="tag">周边</span>
+                    <span class="desc">融创文旅城 亲子游</span>
+                </div>
+                <div class="hero-list-item">
+                    <span class="tag">户外</span>
+                    <span class="desc">芙蓉嶂徒步穿越</span>
+                </div>
+                <div class="hero-list-item">
+                    <span class="tag">文化</span>
+                    <span class="desc">塱头古村一日游</span>
+                </div>
+                <div class="hero-list-item">
+                    <span class="tag">温泉</span>
+                    <span class="desc">美林湖温泉2日游</span>
+                </div>
+                <div class="hero-list-item">
+                    <span class="tag">美食</span>
+                    <span class="desc">花都地道美食之旅</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>为什么选择花都广之旅？</h2>
+                <p>本地服务 · 专业团队 · 安心出行</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏢</div>
+                    <h3>本地实体门店</h3>
+                    <p>门店位于花都核心地段，面对面沟通更放心，提供真实可信的旅游咨询与合同签署服务。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧭</div>
+                    <h3>资深规划师</h3>
+                    <p>团队熟悉花都及珠三角资源，能根据您的需求设计行程，合理搭配景点、餐饮与住宿。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚌</div>
+                    <h3>自营车队资源</h3>
+                    <p>合作正规旅游车队，司机熟悉路况，保证接送准时，让您的旅途更加顺畅舒适。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>多重保障</h3>
+                    <p>签订正规电子合同，赠送旅游意外险，全程质量跟踪，让您出行无忧。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Route Section -->
+    <section class="route-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>热门线路精选</h2>
+                <p>从花都出发，发现身边与远方</p>
+            </div>
+            <div class="route-grid">
+                <div class="route-card">
+                    <div class="route-thumb">
+                        <span class="thumb-icon">🎢</span>
+                        <h3>广州融创文旅城</h3>
+                        <span class="sub-label">亲子 / 1日</span>
+                    </div>
+                    <div class="route-info">
+                        <p>雪世界、水世界、体育世界一网打尽，含往返交通与门票代订服务，适合家庭亲子、年轻朋友结伴游玩。</p>
+                        <div class="route-meta">
+                            <span>¥298 起</span>
+                            <span>每周三/六出发</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-thumb">
+                        <span class="thumb-icon">⛰️</span>
+                        <h3>芙蓉嶂自然徒步</h3>
+                        <span class="sub-label">户外 / 1日</span>
+                    </div>
+                    <div class="route-info">
+                        <p>登高芙蓉峰，赏水库美景，包含专业领队、户外简餐及保险，让您尽情呼吸山野新鲜空气。</p>
+                        <div class="route-meta">
+                            <span>¥198 起</span>
+                            <span>周六发团</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-thumb">
+                        <span class="thumb-icon">🏘️</span>
+                        <h3>塱头古村文化之旅</h3>
+                        <span class="sub-label">文化 / 半日</span>
+                    </div>
+                    <div class="route-info">
+                        <p>探访明清古建筑群，体验非遗灰塑，品尝农家菜。全程讲解服务，感受花都深厚人文底蕴。</p>
+                        <div class="route-meta">
+                            <span>¥128 起</span>
+                            <span>天天出发</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-thumb">
+                        <span class="thumb-icon">♨️</span>
+                        <h3>美林湖温泉2日游</h3>
+                        <span class="sub-label">温泉 / 2日</span>
+                    </div>
+                    <div class="route-info">
+                        <p>入住温泉度假酒店，自由享受园林温泉池，含一正一早，适合公司团建、家庭放松。</p>
+                        <div class="route-meta">
+                            <span>¥598 起</span>
+                            <span>周五/六出发</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-thumb">
+                        <span class="thumb-icon">🚌</span>
+                        <h3>连州地下河2日游</h3>
+                        <span class="sub-label">经典 / 2日</span>
+                    </div>
+                    <div class="route-info">
+                        <p>神秘地下暗河，巧夺天工的钟乳石景观，含往返大巴、导游及一晚住宿，是周边游经典之选。</p>
+                        <div class="route-meta">
+                            <span>¥468 起</span>
+                            <span>每周六</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-thumb">
+                        <span class="thumb-icon">✈️</span>
+                        <h3>桂林阳朔高铁4日</h3>
+                        <span class="sub-label">国内 / 4日</span>
+                    </div>
+                    <div class="route-info">
+                        <p>花都出发，高铁直达桂林，游漓江、逛西街、骑行遇龙河，纯玩无购物，品质住宿。</p>
+                        <div class="route-meta">
+                            <span>¥1680 起</span>
+                            <span>天天发班</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Steps -->
+    <section class="service-steps">
+        <div class="container">
+            <div class="section-title">
+                <h2>预订流程，简单四步</h2>
+                <p>从咨询到出发，全程专人跟进</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-num">01</div>
+                    <h3>需求沟通</h3>
+                    <p>通过电话或到店告知您的出行计划、人数与预算。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">02</div>
+                    <h3>方案定制</h3>
+                    <p>专属顾问为您提供多条线路方案及合理报价。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">03</div>
+                    <h3>签约付款</h3>
+                    <p>确认行程签署正规旅游合同，支持多种付款方式。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">04</div>
+                    <h3>快乐出发</h3>
+                    <p>出团前发送出团通知，导游全程贴心服务。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>出行常见问题</h2>
+                <p>也许您关心的正好在这里</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Q：花都广之旅的实体门店在哪里？</h3>
+                    <p>A：我们的主要门店位于花都区新华街建设北路（近花都广场），交通便利。您也可以提前电话预约，顾问会准备相关行程资料等您到店详谈。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q：线路价格包含哪些项目？</h3>
+                    <p>A：每条线路的包含内容都明确列在行程单上。通常包括交通、住宿（过夜线路）、景点首道门票、导游服务、旅游保险及行程所列餐食。购物和自费项目会在行程中注明，绝不强制消费。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q：可以单独定制花都区内的团建活动吗？</h3>
+                    <p>A：当然可以。我们承接各类企业团建、班级出游、亲子活动定制，可根据预算和人数设计拓展、徒步、农家乐等不同主题的半天至两天方案。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q：如果遇到天气原因导致无法出团怎么办？</h3>
+                    <p>A：我们会根据官方预警和实际路况作出判断。若因不可抗力取消行程，将全额退款或免费改期，保障您的权益。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q：儿童或老人参加有优惠吗？</h3>
+                    <p>A：各线路针对儿童、长者以及持有效证件的学生均有不同程度优惠，具体以实际线路的优惠说明为准。您可以在报名时向顾问出示相关证件，我们会为您核算最优惠价格。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>准备好开启下一段旅程了吗？</h2>
+            <p>无论是周末休闲还是长途旅行，花都广之旅都愿意做您身边的旅行管家。</p>
+            <a href="#" class="cta-btn">📞 立即咨询 020-8680 1234</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>花都广之旅</h3>
+                    <p>扎根花都，服务街坊。我们致力于提供真实、透明、有趣的旅游产品，让每一次出发都成为美好的回忆。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>热门线路</h4>
+                    <ul>
+                        <li><a href="#">融创文旅城跟团游</a></li>
+                        <li><a href="#">花都周边一日游</a></li>
+                        <li><a href="#">广东省内温泉游</a></li>
+                        <li><a href="#">国内长线游</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="#">签证办理</a></li>
+                        <li><a href="#">机票/酒店代订</a></li>
+                        <li><a href="#">企业团建方案</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>花都区新华街建设北路128号</li>
+                        <li>020-8680 1234</li>
+                        <li>info@hdgzl.com</li>
+                        <li>周一至周日 09:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 花都广之旅 版权所有 · 本站为旅游信息展示与咨询平台 | <a href="#">粤ICP备2025012345号</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+                      </html>
